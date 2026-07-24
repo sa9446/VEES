@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0f17;
+  color: #ffffff;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-hover {
+  @apply glass transition-all duration-300 hover:bg-opacity-10 hover:border-opacity-20;
+}
+
+/* Glowing effects */
+.glow-lime {
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.glow-lime-hover:hover {
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.5);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(204, 255, 0, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #CCFF00 0%, #00F0FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-8 py-3 bg-brand-lime text-brand-dark font-bold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-brand-lime/50 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-8 py-3 border-2 border-brand-lime text-brand-lime font-bold rounded-lg transition-all duration-300 hover:bg-brand-lime hover:text-brand-dark active:scale-95;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCFF00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
