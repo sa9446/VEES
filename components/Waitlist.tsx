@@ -8,18 +8,34 @@ export default function Waitlist() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('https://formspree.io/f/xyzabayw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          message: `New early access signup: ${email}`,
+        }),
+      });
 
-    if (email) {
-      setSubmitted(true);
-      setEmail('');
-      setTimeout(() => setSubmitted(false), 5000);
+      if (response.ok) {
+        setSubmitted(true);
+        setEmail('');
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        setError('Failed to submit. Please try again.');
+      }
+    } catch (err) {
+      setError('Error submitting form. Please try again.');
     }
 
     setLoading(false);
@@ -81,6 +97,16 @@ export default function Waitlist() {
             >
               <CheckCircle className="w-4 h-4" />
               <span>Thanks! Check your email for confirmation.</span>
+            </motion.div>
+          )}
+
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-2 text-red-400 text-sm"
+            >
+              <span>⚠️ {error}</span>
             </motion.div>
           )}
         </motion.form>

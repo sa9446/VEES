@@ -2,12 +2,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
+ import { Zap } from 'lucide-react';
 
 export default function Hero() {
   const scrollToWaitlist = () => {
     const waitlistElement = document.getElementById('waitlist');
     waitlistElement?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handlePitchDeck = () => {
+    // Update this URL to your actual pitch deck when ready
+    window.open('https://drive.google.com/your-pitch-deck-link', '_blank');
   };
 
   return (
@@ -88,7 +93,10 @@ export default function Hero() {
               >
                 Join Early Access
               </button>
-              <button className="btn-secondary">
+              <button 
+                onClick={handlePitchDeck}
+                className="btn-secondary"
+              >
                 View Pitch Deck
               </button>
             </motion.div>
