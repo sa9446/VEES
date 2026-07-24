@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import Calculator from '@/components/Calculator';
 import Comparison from '@/components/Comparison';
 import UseCases from '@/components/UseCases';
+import Roadmap from '@/components/Roadmap';
 import Waitlist from '@/components/Waitlist';
 import Footer from '@/components/Footer';
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Calculator />
       <Comparison />
       <UseCases />
+      <Roadmap />
       <Waitlist />
       <Footer />
     </main>

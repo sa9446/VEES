@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Zap } from 'lucide-react';
+import { Mail, Zap, Github, Twitter, Mail as MailIcon } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 py-12 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Product */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,6 +71,28 @@ export default function Footer() {
               <li><a href="#" className="hover:text-brand-lime transition-colors">Discord</a></li>
             </ul>
           </motion.div>
+
+          {/* Founder Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="font-bold mb-4">Founder</h4>
+            <div className="space-y-3">
+              <p className="text-sm text-gray-300 font-semibold">
+                Samanvay Agrawal
+              </p>
+              <a 
+                href="mailto:samanvay.agrawal@yahoo.com"
+                className="flex items-center gap-2 text-sm text-brand-lime hover:text-brand-cyan transition-colors"
+              >
+                <MailIcon className="w-4 h-4" />
+                samanvay.agrawal@yahoo.com
+              </a>
+            </div>
+          </motion.div>
         </div>
 
         <div className="border-t border-white/10 pt-8">
@@ -82,7 +104,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-gray-500 text-sm"
             >
-              © {currentYear} Jolt. All rights reserved.
+              © {currentYear} Jolt. Early-stage startup concept. All rights reserved.
             </motion.p>
 
             <motion.div
