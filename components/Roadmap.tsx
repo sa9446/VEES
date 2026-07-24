@@ -13,23 +13,30 @@ const roadmapItems = [
     icon: Zap,
   },
   {
-    phase: 'Q3 2024',
+    phase: 'H2 2026',
     title: 'Company Registration',
     description: 'Official business registration & regulatory compliance',
     status: 'upcoming',
     icon: Clock,
   },
   {
-    phase: 'Q3 2024',
+    phase: 'H2 2026',
     title: 'Manufacturing Setup',
-    description: 'Partner with food production facilities',
+    description: 'Partner with food production facilities & FSSAI certification',
     status: 'upcoming',
     icon: Clock,
   },
   {
-    phase: 'Q4 2024',
+    phase: 'Early 2027',
+    title: 'Soft Launch',
+    description: 'Beta release to early access community & select markets',
+    status: 'upcoming',
+    icon: Clock,
+  },
+  {
+    phase: 'Mid 2027',
     title: 'Official Launch',
-    description: 'Public release and retail partnerships',
+    description: 'Full public release and retail partnerships across India',
     status: 'upcoming',
     icon: Clock,
   },
@@ -138,7 +145,7 @@ export default function Roadmap() {
             <div>
               <h4 className="text-lg font-bold text-white mb-2">Current Status</h4>
               <p className="text-gray-300">
-                Jolt is currently in the pre-launch phase as a startup concept. We're actively developing the product formula and securing early adopters through this waitlist. Upon company registration, all early access members will receive exclusive benefits and priority access to the first batch. <strong className="text-brand-lime">Your support today helps us build the future of caffeine.</strong>
+                Jolt is currently in the pre-launch phase as a startup concept. We're actively developing the product formula and securing early adopters through this waitlist. Timeline depends on development progress, but we're targeting launch in 2026-2027. Upon company registration, all early access members will receive exclusive benefits and priority access to the first batch. <strong className="text-brand-lime">Your support today helps us build the future of caffeine.</strong>
               </p>
             </div>
           </div>
