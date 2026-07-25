@@ -1,4 +1,4 @@
-# Jolt - Energy, Reimagined
+# Jolt - Energy, Evolved
 
 The official landing page for **Jolt** — a fast-acting, pocket-sized ₹10 caffeine jelly chew delivering 60mg of fast-acting caffeine via oral sublingual absorption.
 

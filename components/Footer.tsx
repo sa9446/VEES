@@ -32,7 +32,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
-              Energy, reimagined. The ₹10 daily caffeine chew.
+              Energy, evolved. The ₹10 daily caffeine chew.
             </p>
           </motion.div>
 

@@ -47,7 +47,7 @@ export default function Hero() {
             >
               <span className="gradient-text">Energy,</span>
               <br />
-              Reimagined.
+              Evolved.
             </motion.h1>
 
             <motion.p
