@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Clock, Zap } from 'lucide-react';
+import { Clock, Zap } from 'lucide-react';
 
 const roadmapItems = [
   {
@@ -44,7 +44,7 @@ const roadmapItems = [
 
 export default function Roadmap() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="roadmap" className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function Roadmap() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-black mb-4">
+          <h2 className="section-title">
             <span className="gradient-text">Our Journey</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">

@@ -17,7 +17,7 @@ export default function Calculator() {
   const totalCaffeine = weeklyCups * 7 * 60;
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="calculator" className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function Calculator() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-black mb-4">
+          <h2 className="section-title">
             <span className="gradient-text">Your Savings Calculator</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">

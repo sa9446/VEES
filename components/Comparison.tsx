@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
-
 const comparisonData = [
   {
     feature: 'Price per dose',
@@ -45,7 +43,7 @@ const comparisonData = [
 
 export default function Comparison() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="comparison" className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +52,7 @@ export default function Comparison() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-black mb-4">
+          <h2 className="section-title">
             <span className="gradient-text">Jolt vs The Competition</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">

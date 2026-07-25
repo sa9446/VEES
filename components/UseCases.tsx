@@ -26,8 +26,12 @@ const useCases = [
 ];
 
 export default function UseCases() {
+  const scrollToWaitlist = () => {
+    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="use-cases" className="py-24 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,11 +40,11 @@ export default function UseCases() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-black mb-4">
+          <h2 className="section-title">
             <span className="gradient-text">Built for Your Lifestyle</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Whether you're grinding at the gym, pulling an all-nighter, or just need a quick pick-me-up.
+            Whether you&apos;re grinding at the gym, pulling an all-nighter, or just need a quick pick-me-up.
           </p>
         </motion.div>
 
@@ -48,22 +52,26 @@ export default function UseCases() {
           {useCases.map((useCase, idx) => {
             const Icon = useCase.icon;
             const isLime = useCase.color === 'brand-lime';
-            
+
             return (
-              <motion.div
+              <motion.button
                 key={idx}
+                type="button"
+                onClick={scrollToWaitlist}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.2, duration: 0.8 }}
+                transition={{ delay: idx * 0.15, duration: 0.7 }}
                 viewport={{ once: true }}
-                whileHover={{ translateY: -5 }}
-                className="glass-hover rounded-2xl p-8 space-y-4 group cursor-pointer border-2 border-transparent hover:border-brand-lime transition-all"
+                whileHover={{ y: -6 }}
+                className="text-left glass-hover rounded-2xl p-8 space-y-4 group border-2 border-transparent hover:border-brand-lime/60 transition-all"
               >
-                <div className={`w-16 h-16 glass rounded-lg flex items-center justify-center ${isLime ? 'text-brand-lime' : 'text-brand-cyan'} group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`w-16 h-16 glass rounded-xl flex items-center justify-center ${isLime ? 'text-brand-lime' : 'text-brand-cyan'} group-hover:scale-110 transition-transform`}
+                >
                   <Icon className="w-8 h-8" />
                 </div>
 
-                <h3 className="text-2xl font-black text-white">
+                <h3 className="font-display text-2xl font-extrabold text-white">
                   {useCase.title}
                 </h3>
 
@@ -72,10 +80,14 @@ export default function UseCases() {
                 </p>
 
                 <div className="pt-4 flex items-center gap-2 text-sm font-semibold">
-                  <span className={isLime ? 'text-brand-lime' : 'text-brand-cyan'}>Learn more</span>
-                  <span className="text-xl">→</span>
+                  <span className={isLime ? 'text-brand-lime' : 'text-brand-cyan'}>
+                    Join waitlist
+                  </span>
+                  <span className="text-xl" aria-hidden>
+                    →
+                  </span>
                 </div>
-              </motion.div>
+              </motion.button>
             );
           })}
         </div>

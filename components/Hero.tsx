@@ -2,39 +2,48 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
- import { Zap } from 'lucide-react';
+import { Zap } from 'lucide-react';
+
+const PITCH_DECK_URL =
+  'https://docs.google.com/presentation/d/1DLTtfgtZkxHz8rDRjKAKxrRoHZksbzCv/preview';
 
 export default function Hero() {
   const scrollToWaitlist = () => {
-    const waitlistElement = document.getElementById('waitlist');
-    waitlistElement?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handlePitchDeck = () => {
-    // Update this URL to your actual pitch deck when ready
-    window.open('https://drive.google.com/your-pitch-deck-link', '_blank');
+    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-10">
-      {/* Background gradient blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-lime/10 rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl -z-10 animate-pulse" />
+    <section className="min-h-screen flex items-center relative overflow-hidden pt-16 pb-12">
+      <div className="absolute inset-0 bg-hero-glow" />
+      <div
+        className="absolute inset-0 opacity-[0.35] pointer-events-none"
+        style={{ backgroundImage: 'var(--tw-gradient-stops)' }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-noise opacity-40 pointer-events-none mix-blend-overlay" />
 
-      <div className="container mx-auto px-4 z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Text Content */}
+      <div className="container mx-auto px-4 z-10 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-7"
           >
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="font-display text-brand-lime tracking-[0.2em] text-sm uppercase font-bold"
+            >
+              Jolt
+            </motion.p>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-5xl lg:text-7xl font-black leading-tight"
+              className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight"
             >
               <span className="gradient-text">Energy,</span>
               <br />
@@ -44,100 +53,100 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl lg:text-2xl text-gray-300"
+              transition={{ delay: 0.35, duration: 0.8 }}
+              className="text-xl lg:text-2xl text-gray-300 font-medium"
             >
-              The <span className="text-brand-lime font-bold">₹10 Daily Caffeine Chew</span>
+              The{' '}
+              <span className="text-brand-lime font-bold">
+                ₹10 Daily Caffeine Chew
+              </span>
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-lg text-gray-400 max-w-md"
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="text-lg text-gray-400 max-w-md leading-relaxed"
             >
-              60mg of fast-acting caffeine via sublingual absorption. Pocket-sized. Zero bloat. Perfect for gym-goers, coders, and night-shift warriors.
+              60mg of fast-acting caffeine via sublingual absorption.
+              Pocket-sized. Zero bloat.
             </motion.p>
 
-            {/* Value Props */}
-            <motion.div
+            <motion.ul
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
+              transition={{ delay: 0.65, duration: 0.8 }}
               className="flex flex-col gap-3 text-sm text-gray-300"
             >
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-brand-lime" />
-                <span>Ultra-Affordable at just ₹10 vs ₹110+ energy drinks</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-brand-cyan" />
-                <span>Fast absorption in 5-10 minutes (no 40-min lag)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-brand-lime" />
-                <span>Zero bloat. Fits in pockets, gyms, or wallets</span>
-              </div>
-            </motion.div>
+              {[
+                {
+                  iconClass: 'text-brand-lime',
+                  text: '₹10 vs ₹110+ energy drinks',
+                },
+                {
+                  iconClass: 'text-brand-cyan',
+                  text: 'Hits in 5–10 minutes',
+                },
+                {
+                  iconClass: 'text-brand-lime',
+                  text: 'Fits in a pocket — no liquid bloat',
+                },
+              ].map((item) => (
+                <li key={item.text} className="flex items-center gap-2.5">
+                  <Zap className={`w-5 h-5 shrink-0 ${item.iconClass}`} />
+                  <span>{item.text}</span>
+                </li>
+              ))}
+            </motion.ul>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="flex flex-wrap gap-4 pt-6"
+              transition={{ delay: 0.85, duration: 0.8 }}
+              className="flex flex-wrap gap-4 pt-2"
             >
-              <button
-                onClick={scrollToWaitlist}
-                className="btn-primary"
-              >
+              <button type="button" onClick={scrollToWaitlist} className="btn-primary">
                 Join Early Access
               </button>
-              <button 
-                onClick={handlePitchDeck}
-                className="btn-secondary"
+              <a
+                href={PITCH_DECK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary inline-flex items-center justify-center"
               >
                 View Pitch Deck
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
-          {/* Right: Product Badge Animation */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            transition={{ delay: 0.35, duration: 0.9 }}
             className="flex items-center justify-center lg:justify-end"
           >
-            <div className="relative w-64 h-64 lg:w-80 lg:h-80">
-              {/* Outer glowing ring */}
+            <div className="relative w-64 h-64 lg:w-[22rem] lg:h-[22rem]">
               <motion.div
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                }}
-                className="absolute inset-0 bg-gradient-to-r from-brand-lime to-brand-cyan rounded-full blur-2xl opacity-50"
+                animate={{ scale: [1, 1.08, 1], opacity: [0.4, 0.7, 0.4] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute inset-0 bg-gradient-to-br from-brand-lime to-brand-cyan rounded-full blur-3xl"
               />
 
-              {/* Product badge */}
               <motion.div
-                animate={{
-                  y: [-10, 10, -10],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                }}
+                animate={{ y: [-12, 12, -12] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute inset-0 glass rounded-full flex items-center justify-center pulse-glow"
               >
-                <div className="text-center">
-                  <div className="text-6xl font-black text-brand-lime mb-2">JOLT</div>
-                  <div className="text-sm text-gray-300">60mg Caffeine</div>
-                  <div className="text-lg font-bold text-brand-cyan">₹10</div>
+                <div className="text-center select-none">
+                  <div className="font-display text-6xl lg:text-7xl font-extrabold text-brand-lime mb-1 tracking-tight">
+                    JOLT
+                  </div>
+                  <div className="text-sm text-gray-300 tracking-wide">
+                    60mg Caffeine
+                  </div>
+                  <div className="text-xl font-bold text-brand-cyan mt-1">
+                    ₹10
+                  </div>
                 </div>
               </motion.div>
             </div>
