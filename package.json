@@ -1,12 +1,13 @@
 {
-  "name": "vees-landing",
+  "name": "jolt-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "assets:generate": "node scripts/generate-assets.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

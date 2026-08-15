@@ -15,9 +15,42 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "VEES — Energy, Evolved",
+  metadataBase: new URL("https://jolt.vercel.app"),
+  title: "Jolt — Energy, Evolved",
   description:
     "The ₹10 Daily Caffeine Chew. Fast-acting, pocket-sized energy for gym-goers, students, and night-shift workers.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Jolt",
+    title: "Jolt — Energy, Evolved",
+    description:
+      "The ₹10 Daily Caffeine Chew. Fast-acting, pocket-sized energy for gym-goers, students, and night-shift workers.",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jolt — Energy, Evolved. The ₹10 daily caffeine chew.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jolt — Energy, Evolved",
+    description:
+      "The ₹10 Daily Caffeine Chew. Fast-acting, pocket-sized energy for gym-goers, students, and night-shift workers.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

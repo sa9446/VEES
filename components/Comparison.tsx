@@ -5,37 +5,37 @@ import { motion } from 'framer-motion';
 const comparisonData = [
   {
     feature: 'Price per dose',
-    vees: '₹10',
+    jolt: '₹10',
     energyDrink: '₹120',
     coffee: '₹80',
   },
   {
     feature: 'Onset time',
-    vees: '5-10 min',
+    jolt: '5-10 min',
     energyDrink: '35-45 min',
     coffee: '20-30 min',
   },
   {
     feature: 'Portability',
-    vees: '✓ Pocket-sized',
+    jolt: '✓ Pocket-sized',
     energyDrink: '✗ Heavy can',
     coffee: '✗ Hot cup',
   },
   {
     feature: 'Liquid volume',
-    vees: '0 ml',
+    jolt: '0 ml',
     energyDrink: '250 ml',
     coffee: '150 ml',
   },
   {
     feature: 'Stomach bloat',
-    vees: '✓ None',
+    jolt: '✓ None',
     energyDrink: '✗ Severe',
     coffee: '✗ Moderate',
   },
   {
     feature: 'Caffeine dose',
-    vees: '60 mg',
+    jolt: '60 mg',
     energyDrink: '80-120 mg',
     coffee: '95 mg',
   },
@@ -53,10 +53,10 @@ export default function Comparison() {
           className="text-center mb-16"
         >
           <h2 className="section-title">
-            <span className="gradient-text">VEES vs The Competition</span>
+            <span className="gradient-text">Jolt vs The Competition</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            See why VEES is the superior choice for on-the-go energy.
+            See why Jolt is the superior choice for on-the-go energy.
           </p>
         </motion.div>
 
@@ -73,7 +73,7 @@ export default function Comparison() {
               <thead>
                 <tr className="border-b border-white/10">
                   <th className="px-6 py-4 text-left font-bold text-gray-300">Feature</th>
-                  <th className="px-6 py-4 text-center font-bold text-brand-lime">VEES</th>
+                  <th className="px-6 py-4 text-center font-bold text-brand-lime">Jolt</th>
                   <th className="px-6 py-4 text-center font-bold text-gray-400">Energy Drink</th>
                   <th className="px-6 py-4 text-center font-bold text-gray-400">Coffee</th>
                 </tr>
@@ -82,7 +82,7 @@ export default function Comparison() {
                 {comparisonData.map((row, idx) => (
                   <tr key={idx} className="border-b border-white/5 hover:bg-white/5 transition-colors">
                     <td className="px-6 py-4 text-gray-300 font-semibold">{row.feature}</td>
-                    <td className="px-6 py-4 text-center text-brand-lime font-bold">{row.vees}</td>
+                    <td className="px-6 py-4 text-center text-brand-lime font-bold">{row.jolt}</td>
                     <td className="px-6 py-4 text-center text-gray-400">{row.energyDrink}</td>
                     <td className="px-6 py-4 text-center text-gray-400">{row.coffee}</td>
                   </tr>
@@ -106,8 +106,8 @@ export default function Comparison() {
               <h3 className="font-bold text-gray-300 mb-3">{row.feature}</h3>
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-400">VEES:</span>
-                  <span className="text-brand-lime font-bold">{row.vees}</span>
+                  <span className="text-sm text-gray-400">Jolt:</span>
+                  <span className="text-brand-lime font-bold">{row.jolt}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-400">Energy Drink:</span>

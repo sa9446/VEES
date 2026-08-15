@@ -9,10 +9,10 @@ export default function Calculator() {
 
   const energyDrinkPrice = 120;
   const coffeePrice = 80;
-  const veesPrice = 10;
+  const joltPrice = 10;
   const avgPrice = (energyDrinkPrice + coffeePrice) / 2;
 
-  const annualSavings = Math.round((avgPrice - veesPrice) * weeklyCups * 52);
+  const annualSavings = Math.round((avgPrice - joltPrice) * weeklyCups * 52);
   const liquidBloatAvoided = Math.round((250 + 150) / 2 * weeklyCups * 52 / 1000);
   const totalCaffeine = weeklyCups * 7 * 60;
 
@@ -30,7 +30,7 @@ export default function Calculator() {
             <span className="gradient-text">Your Savings Calculator</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            See how much you'll save by switching to VEES for your daily caffeine fix.
+            See how much you'll save by switching to Jolt for your daily caffeine fix.
           </p>
         </motion.div>
 

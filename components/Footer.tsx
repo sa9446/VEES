@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Zap className="w-6 h-6 text-brand-lime" />
               <span className="font-display text-2xl font-extrabold text-brand-lime">
-                VEES
+                JOLT
               </span>
             </div>
             <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
@@ -85,7 +85,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="text-gray-500 text-sm text-center md:text-left"
           >
-            © {currentYear} VEES. Early-stage startup concept. All rights
+            © {currentYear} Jolt. Early-stage startup concept. All rights
             reserved.
           </motion.p>
         </div>

@@ -27,7 +27,7 @@ export default function Waitlist() {
         },
         body: JSON.stringify({
           email,
-          _subject: 'VEES — New early access signup',
+          _subject: 'Jolt — New early access signup',
           message: `New early access signup: ${email}`,
           _template: 'table',
           _captcha: 'false',
@@ -67,7 +67,7 @@ export default function Waitlist() {
             <span className="gradient-text">Be the First</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Join the early access waitlist — we&apos;ll email you when VEES
+            Join the early access waitlist — we&apos;ll email you when Jolt
             launches.
           </p>
         </motion.div>
