@@ -8,7 +8,7 @@ const roadmapItems = [
   {
     phase: 'Current',
     title: 'Product Development',
-    description: 'Perfecting the Jolt formula and packaging design',
+    description: 'Perfecting the VEES formula and packaging design',
     status: 'in-progress',
     icon: Zap,
   },
@@ -57,7 +57,7 @@ export default function Roadmap() {
             <span className="gradient-text">Our Journey</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            From concept to market. Here's our roadmap to bringing Jolt to every pocket in India.
+            From concept to market. Here's our roadmap to bringing VEES to every pocket in India.
           </p>
         </motion.div>
 
@@ -145,7 +145,7 @@ export default function Roadmap() {
             <div>
               <h4 className="text-lg font-bold text-white mb-2">Current Status</h4>
               <p className="text-gray-300">
-                Jolt is currently in the pre-launch phase as a startup concept. We're actively developing the product formula and securing early adopters through this waitlist. Timeline depends on development progress, but we're targeting launch in 2026-2027. Upon company registration, all early access members will receive exclusive benefits and priority access to the first batch. <strong className="text-brand-lime">Your support today helps us build the future of caffeine.</strong>
+                VEES is currently in the pre-launch phase as a startup concept. We're actively developing the product formula and securing early adopters through this waitlist. Timeline depends on development progress, but we're targeting launch in 2026-2027. Upon company registration, all early access members will receive exclusive benefits and priority access to the first batch. <strong className="text-brand-lime">Your support today helps us build the future of caffeine.</strong>
               </p>
             </div>
           </div>

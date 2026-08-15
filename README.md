@@ -1,6 +1,6 @@
-# Jolt - Energy, Evolved
+# VEES - Energy, Evolved
 
-The official landing page for **Jolt** — a fast-acting, pocket-sized ₹10 caffeine jelly chew delivering 60mg of fast-acting caffeine via oral sublingual absorption.
+The official landing page for **VEES** — a fast-acting, pocket-sized ₹10 caffeine jelly chew delivering 60mg of fast-acting caffeine via oral sublingual absorption.
 
 ## 🚀 Quick Start
 
@@ -12,8 +12,8 @@ The official landing page for **Jolt** — a fast-acting, pocket-sized ₹10 caf
 
 ```bash
 # Clone the repository
-git clone https://github.com/sa9446/JOLT.git
-cd JOLT
+git clone https://github.com/sa9446/VEES.git
+cd VEES
 
 # Install dependencies
 npm install
@@ -79,7 +79,7 @@ npm run start
 ## 📁 Project Structure
 
 ```
-JOLT/
+VEES/
 ├── app/
 │   ├── layout.tsx       # Root layout
 │   ├── page.tsx         # Main page
@@ -122,7 +122,7 @@ We welcome contributions! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is private and proprietary to Jolt.
+This project is private and proprietary to VEES.
 
 ## 📞 Contact
 

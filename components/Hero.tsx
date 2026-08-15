@@ -36,7 +36,7 @@ export default function Hero() {
               transition={{ delay: 0.1, duration: 0.6 }}
               className="font-display text-brand-lime tracking-[0.2em] text-sm uppercase font-bold"
             >
-              Jolt
+              VEES
             </motion.p>
 
             <motion.h1
@@ -139,7 +139,7 @@ export default function Hero() {
               >
                 <div className="text-center select-none">
                   <div className="font-display text-6xl lg:text-7xl font-extrabold text-brand-lime mb-1 tracking-tight">
-                    JOLT
+                    VEES
                   </div>
                   <div className="text-sm text-gray-300 tracking-wide">
                     60mg Caffeine

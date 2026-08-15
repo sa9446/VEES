@@ -15,7 +15,7 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jolt — Energy, Evolved",
+  title: "VEES — Energy, Evolved",
   description:
     "The ₹10 Daily Caffeine Chew. Fast-acting, pocket-sized energy for gym-goers, students, and night-shift workers.",
 };
